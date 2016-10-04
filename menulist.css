@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat:400,700,900|Open+Sans:400,700,900|Raleway:400,700,900);
+.box, .box textarea, .box input[type="submit"], .btn {
+  border-radius: 2px;
+}
+
+/*-----------------------------------//
+//  MIXINS
+//-----------------------------------*/
+/*-----------------------------------//
+//  D.R.Y. CLASSES
+//-----------------------------------*/
+/*Text Aligns*/
+.textLeft {
+  text-align: left;
+}
+.textRight {
+  text-align: right;
+}
+.textCenter {
+  text-align: center;
+}
+
+/*-----------------------------------//
+//  GENERAL
+//-----------------------------------*/
+body {
+  font: 14px/1.5em "Open Sans";
+  background: #F0F1FA;
+}
+
+a {
+  text-decoration: none;
+  color: #E54B4B;
+}
+
+p em {
+  background: #f2f2f2;
+  color: #87878f;
+  padding: 0 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat";
+}
+
+hr {
+  margin: 1.5em 0;
+}
+
+.hide {
+  display: none;
+}
+
+/*-----------------------------------//
+//  TEMPLATE STYLES
+//-----------------------------------*/
+/* Buttons and Inputs */
+textarea,
+button,
+a.btn,
+select,
+input[type="text"],
+input[type="submit"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button {
+  font-family: inherit !important;
+  font-size: 13px;
+  border: 1px solid #B0B0BA;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+a.btn,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button {
+  background: transparent;
+  display: inline-block;
+  padding: 6px 10px;
+  color: inherit;
+  font-weight: bold !important;
+  font-family: Montserrat;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Row */
+.row {
+  margin-bottom: 1.5%;
+  overflow: hidden;
+}
+.row:last-child {
+  margin: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .hlf,
+  .trd,
+  .fth {
+    float: left;
+    margin-right: 1.5%;
+  }
+  .hlf:last-child,
+  .trd:last-child,
+  .fth:last-child {
+    margin: 0;
+    float: right;
+  }
+
+  .hlf {
+    width: 49.25%;
+  }
+
+  .trd {
+    width: 32.3%;
+  }
+
+  .fth {
+    width: 23.8%;
+  }
+}
+/* Box */
+.box {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 3%;
+  margin: 0 auto;
+  margin-bottom: 1.6%;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+@media screen and (min-width: 480px) {
+  .box {
+    padding: 2%;
+    margin-bottom: 2%;
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 765px) {
+  .box {
+    padding: 1.5%;
+    margin-bottom: 1.5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .box {
+    padding: 1.25%;
+    margin-bottom: 1.25%;
+  }
+}
+@media screen and (min-width: 1180px) {
+  .box {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+}
+
+/*-----------------------------------//
+//  PEN STYLES
+//-----------------------------------*/
+/*PEN STYLES*/
+.box select, .box textarea, .box input[type="submit"], .box.options input[type="text"], .btn {
+  border-color: #E2E2E2;
+}
+
+.box span, .box p,
+.box ol, .box.options label, .box.options input[type="submit"] {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.container, .box {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.more_opts {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  color: #9e9e9e;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.more_opts:hover {
+  color: #717171;
+}
+
+.box {
+  background: #fff;
+  font-size: 16px;
+  padding: 20px;
+  margin: 15px auto;
+  box-shadow: 0 5px 3px -2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+@media screen and (max-width: 360px) {
+  .box {
+    margin-top: 0;
+  }
+}
+.box label, .box input[type="submit"] {
+  font-family: "Montserrat";
+}
+.box span.error {
+  color: #F02D3A;
+}
+.box span.error select {
+  border-color: #F02D3A;
+}
+.box select {
+  margin-left: 3px;
+  margin-top: 5px;
+  padding: 2px 3px;
+  cursor: pointer;
+}
+.box p,
+.box ol {
+  line-height: 1.2em;
+  margin: 5px 0;
+}
+.box textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px auto 5px;
+}
+.box textarea.error {
+  border-color: #F02D3A;
+}
+.box input[type="submit"] {
+  float: right;
+  cursor: pointer;
+  padding: 7px 10px;
+  background: transparent;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.box input[type="submit"]:hover {
+  background: dodgerblue;
+  border-color: transparent;
+  color: #fff;
+}
+@media screen and (max-width: 360px) {
+  .box input[type="submit"] {
+    float: none;
+    margin: 20px auto 0;
+  }
+}
+.box.inputBox label, .box.inputBox input[type="submit"] {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #E2E2E2;
+  padding-bottom: 7px;
+}
+.box.options span {
+  display: block;
+  padding-bottom: 10px;
+}
+.box.options input[type="text"] {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 4px;
+  width: 42%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 360px) {
+  .box.options input[type="text"] {
+    width: 100%;
+  }
+}
+.box.options input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  float: right;
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: 5px;
+  background: transparent;
+  color: #e2e2e2;
+  cursor: pointer;
+}
+.btn.copy {
+  float: none;
+  color: #aeaeae;
+}
+.btn.copy:hover {
+  border-color: #bcbcbc;
+}
+.btn:hover {
+  color: #aeaeae;
+}
+
+.htmlBox {
+  margin: 0 auto !important;
+  max-width: 600px;
+  position: relative;
+  text-align: right;
+}
+.htmlBox pre,
+.htmlBox code {
+  clear: both;
+}
